@@ -1,0 +1,279 @@
+:root {
+    --text-color: #1a1a20;
+    --link-color: #345dce;
+    --background-color: #e0a8db;
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+
+   font-family: 'Poppins', sans-serif;
+   background-color: var(--background-color);
+}
+
+a{
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/* NAVBAR */
+nav{
+ display:flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 0 50px;
+ height: 80px;
+
+}
+
+nav .left a {
+color: var(--text-color);
+font-size: 22px;
+font-weight: 600;
+}
+
+nav .right a {
+    color: var(--text-color);
+    margin: 0 10px;
+}
+
+nav .right a:last-child {
+    color: var(--background-color);
+    background-color: var(--text-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+nav .right a span{
+    margin-left: 5px;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    padding: 0 50px;
+    margin: 50px 0;
+    margin-bottom: 100px;
+    gap: 40px;
+}
+
+.hero-section .text {
+    flex: 5;
+}
+
+.hero-section .text h2 {
+    font-size: 45px;
+}
+
+.hero-section .text .links {
+    margin-top: 25px;
+}
+
+.hero-section .text .links a {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid var(--link-color);
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: .1s;
+}
+
+.hero-section .text .links a:hover{
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+}
+
+.hero-section .headshot {
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+
+.hero-section .headshot img{
+    width: 350px;
+    border-radius: 50%;
+
+}
+
+/* SECTION 2: SKILLS */
+.skills-section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+
+}
+.skills-section h2{
+    text-align: center;
+    font-size: 35px;
+}
+
+.skills-section .text{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skills-section .cells{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills-section .cells .cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 250px;
+    padding: 100px 20px;
+    margin: 5px;
+    border: 2px solid #4b4848;
+    border-radius: 5px;
+}
+
+/* --SECTION 3: Experience   */
+.experience-section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+.experince-section h1{
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.experience-section .group .experience-details{
+    display: flex;
+    align-items: center;
+}
+
+.experience-section .group p{
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+/* SECTION 4: CONTACT */
+.contact-section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.contact-section h2{
+    font-size: 35px;
+}
+
+.contact-section .group{
+    display: flex;
+    gap: 50px;
+}
+
+.contact-section .grpup .text{
+    flex: 3;
+}
+
+.contact-section .group form{
+   flex:3;
+   display: flex;
+   flex-direction: column;
+}
+.contact-section .group form imput,
+.contact-section .group form textarea{
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid var(--link-color);
+    background-color: transparent;
+    padding: 10px;
+    margin-bottom: 15px;
+    outline: none;
+    resize: none;
+}
+
+.contact-section .group form button{
+    font-size: 16px;
+    font-family: 'poppins',sans-serif;
+    color: #fff;
+    background-color: var(--link-color);
+    border: none;
+    height: 50px;
+    cursor: pointer;
+    transition: .1s;
+}
+.contact-section .group form button:hover{
+    filter: brightness(.9);
+}
+
+
+
+@media(max-width: 850px){
+    /* SECTION 1 HERO  */
+    .hero-section .text h2{
+        font-size: 35px;
+    }
+}
+
+
+@media(max-width: 800px){
+    /* SECTION 1 HERO  */
+    .hero-section {
+        flex-direction: column-reverse;
+    }
+
+    .hero-section .headshot img{
+        width: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+    /* NAVBAR */
+    nav {
+        padding: 1 20px;
+    }
+    nav .right a{
+        font-size: 22px;
+    }
+    nav .right a:last-child {
+        color: var(--text-color);
+        background-color: transparent;
+        padding: 0;
+    }
+
+    /* SECTION4- contact*/
+    .contact-section .group{
+        flex-direction: column;
+    }
+
+    nav .right a span {
+ 
+        display: none;
+    }
+}
+
+/* SECTION 1: HERO */
+.hero-section {
+    padding: 0 20px;
+}
+
+.hero-section .text h2{
+    font-size: 30px;
+}
+
+/* section 2: skills */
+.skills-section{
+    padding: 0 20px;
+}
+
+.skills-section .cells .cell span{
+    font-size: 16px;
+}
+
+/*section 4:  contact */
+.contact-section{
+    padding: 0 20px;
+}
